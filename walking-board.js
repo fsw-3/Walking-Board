@@ -45,13 +45,21 @@ const gameControl = (arrayBoard, arrayControl) => {
 
   return arrayBoard;
 };
-let control = ["↑", "←", "↑", "→"];
-let control2 = ["←", "↑", "←", "→", "↓"];
-let board = [
+let board1 = [
   ["", "", "", "", ""],
   ["", "", "", "", ""],
   ["", "", "*", "", ""],
   ["", "", "", "", ""],
   ["", "", "", "", ""],
 ];
-console.log(gameControl(board, control2));
+
+console.log(gameControl(board1, ["↑", "←", "↑", "→"]));
+
+let board2 = [
+  ["", "", "", "", ""],
+  ["", "", "", "", ""],
+  ["", "", "*", "", ""],
+  ["", "", "", "", ""],
+  ["", "", "", "", ""],
+];
+console.log(gameControl(board2, ["↓", "←", "↑", "→", "→", "↑", "→"]));
