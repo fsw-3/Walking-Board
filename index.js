@@ -1,6 +1,7 @@
 console.log("hello world");
-function boarf(){
-    
+function board(){
+let result = [];
+
 }
 // coba coba
 // ini diubah
