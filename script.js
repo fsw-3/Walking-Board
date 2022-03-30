@@ -4,3 +4,5 @@ if(arah=='↑'){
 }else{
     console.log('arah mana tuh?');
 }
+
+// add coment to script.js
