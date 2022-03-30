@@ -1,45 +1,45 @@
-function gameControl(board,array) {
-    console.log(board);
-    console.log(array);
+function gameControl(board,arrow) {   
     let result = [];
-    let x;
-    let y;
-
+    let newRow;
+    let newCol;
+    //looping untuk menambil baris dan kolom dari bintang dalam board
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board.length; j++) {
             if (board[i][j] == '*') {
-                x = i;
-                y = j;
+                newRow = i;
+                newCol = j;
             }
         }            
     }
     
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == '↑') {
-            x -= 1;
+    //looping untuk mengetahui letak baris dan kolom yang baru dari bintang setelah ditentukan melalui arah panah
+    for (let i = 0; i < arrow.length; i++) {
+        if (arrow[i] == '↑') {
+            newRow -= 1;
         }
-        else if(array[i] == '←'){
-            y -= 1;
+        else if(arrow[i] == '←'){
+            newCol -= 1;
         }
-        else if(array[i] == '↓'){
-            x += 1;;
+        else if(arrow[i] == '↓'){
+            newRow += 1;;
         }
         else{
-            y += 1;
+            newCol += 1;
         }
     }
 
+    //looping untuk membuat array baru yang berisi baris dan kolom baru bintang
     for (let i = 0; i < board.length; i++) {
-        let tes = [];
+        let array = [];
         for (let j = 0; j < board.length; j++) {
-            if (i == x && j == y) {
-                tes.push('*')
+            if (i == newRow && j == newCol) {
+                array.push('*')
             }
             else{
-                tes.push('');
+                array.push('');
             }         
         }
-        result.push(tes);            
+        result.push(array);            
     }
 
     return result
