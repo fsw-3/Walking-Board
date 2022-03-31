@@ -9,7 +9,15 @@ function gameControl(gameboard1,controller) {
              gameboard1[i][j] = '';
              i -= 1;
              gameboard1[i][j] ='*';
-           }
+           } else if (controller[k] == '←') {
+            gameboard1[i][j] = '';
+            j -= 1;
+            gameboard1[i][j] ='*';
+           } else if (controller[k] == '←') {
+            gameboard1[i][j] = '';
+            i -= 1;
+            gameboard1[i][j] ='*';
+           } 
          }
        }
      } 
@@ -23,5 +31,5 @@ let board1 = [
     ['', '', '', '', ''],
     ['', '', '', '', '']
   ];
-    console.log(gameControl(board1,['↑','↑']));
+  console.log(gameControl(board1, ['↑', '←']));
   
